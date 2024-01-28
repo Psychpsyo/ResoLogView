@@ -8,12 +8,24 @@ function labelAll(htmlClass, label) {
 }
 
 // translate page
+const githubLink = "https://github.com/Psychpsyo/ResoLogView";
 function translate() {
 	logInputLabel.textContent = locale.inputLog;
 	labelAll("prevPageBtn", locale.previousPage);
 	labelAll("nextPageBtn", locale.nextPage);
 	labelAll("pgSpan", locale.page);
 	mainLog.dataset.emptyLabel = locale.noLogsLoaded;
+
+	// github link
+	const contribParts = locale.contribute.split("{{GITHUB_LINK}}");
+	contribute.innerHTML = "";
+	contribute.appendChild(document.createTextNode(contribParts[0]));
+	const link = document.createElement("a");
+	link.textContent = githubLink;
+	link.href = githubLink;
+	link.target = "_blank";
+	contribute.appendChild(link);
+	contribute.appendChild(document.createTextNode(contribParts[1]));
 }
 
 translate();

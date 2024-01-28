@@ -67,5 +67,7 @@
 		"WRN_UNMAPPED_ELEMENTS": "Unmapped Elements",
 		"WRN_UNSUPPORTED_WORKER_TYPE": "Unsupported Worker Type",
 		"WRN_UNUSED_CANDIDATES": "Unused Candidates"
-	}
+	},
+
+	"contribute": "Want to help out? You can contribute to this project at {{GITHUB_LINK}}!"
 }

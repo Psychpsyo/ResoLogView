@@ -1,0 +1,1 @@
+export const locale = await (await fetch("./locales/en.json")).json();

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Resonite Log Viewer</title>
+
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body>
+		<label id="logInputLabel" for="logInput"></label><br>
+		<input id="logInput" type="file" accept=".log"><br>
+		<br>
+		<nav class="pageNav">
+			<button class="prevPageBtn"></button> <span class="pgSpan"></span> <span class="currentPage">0</span>/<span class="pageTotal">0</span> <button class="nextPageBtn"></button>
+		</nav>
+		<div id="mainLog"></div>
+		<nav class="pageNav">
+			<button class="prevPageBtn"></button> <span class="pgSpan"></span> <span class="currentPage">0</span>/<span class="pageTotal">0</span> <button class="nextPageBtn"></button>
+		</nav>
+
+		<template id="logEntry">
+			<details class="logEntry">
+				<summary><span class="logTimestamp"></span> - <span class="logTitle"></span></summary>
+				<hr>
+				<pre class="logContent"></pre>
+			</details>
+		</template>
+
+		<script src="main.mjs" type="module"></script>
+	</body>
+</html>

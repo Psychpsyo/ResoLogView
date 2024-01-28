@@ -1,0 +1,48 @@
+body {
+	overflow-x: hidden;
+}
+
+#mainLog {
+	min-height: 3em;
+	position: relative;
+}
+
+#mainLog:empty::after {
+	content: attr(data-empty-label);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.pageNav {
+	text-align: center;
+}
+
+.logEntry {
+	border: 1px solid black;
+	border-radius: .5em;
+	padding: .25em;
+	margin: .5em;
+}
+.logTitle {
+	font-weight: bold;
+}
+
+.logContent {
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+.typeUNK {
+	background-color: lightgray;
+}
+.typeERR {
+	background-color: #f88;
+}
+.typeWRN {
+	background-color: #ff8;
+}
+.typeGRN {
+	background-color: #8f8;
+}
